@@ -1,0 +1,152 @@
+@import "compass";
+@import url(https://fonts.googleapis.com/css?family=Abel);
+// font-family
+$baseFontFamily :"游ゴシック", YuGothic, "メイリオ",Verdana, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+
+// colors
+$baseColor: #F1DDBC;
+$subColor: #A2765B;
+$keyColor: #579485;
+$fontColor: #4c4c4c;
+
+//全体背景色
+body{
+  background-color:$baseColor;
+}
+
+
+//header
+.box {
+background-image:url("./images/g3744-r.png");
+  height: 500px;
+  width: 100%;
+  background-size: cover;
+  background-position: right bottom;
+}//ヘッダー画像の伸縮がいつのまにか消えている件について
+
+//タイトル
+
+h1{
+  margin-top: 20px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+h2{
+ 
+  font-size: 2.4rem;
+  font-weight: 600;
+  color:$subColor;
+  margin-bottom: 20px;
+  text-align: center;
+  
+}
+
+p{
+  line-height: 1.5;
+}
+
+// Boxが3つあるやつ
+
+  
+#skills {
+
+  .container {
+   @include display-flex;
+    justify-content: space-between;
+    @include flex-direction(row);    // とりあえず横並びに戻した
+  }
+  h3 {
+    color: $baseColor;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  
+  p{
+    color: $baseColor;
+    text-align: center;
+  }
+  
+  .skill-box {
+    @include flex(1);
+    margin: 10px 10px;                     // 上下にマージン
+    padding: 20px;
+    background-color: $keyColor;
+    @include border-radius(4px);
+    @include box-sizing(border-box);
+  
+  }
+
+  
+  i {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 5px;
+   padding-top: 15px;
+    @include box-sizing(border-box);
+    @include border-radius(50%);
+  }
+  
+  .text-center{
+
+    margin-bottom:20px;
+    font-size: 2rem;
+    font-weight: Right;
+  }
+}
+
+
+h4{
+  color: $baseColor;
+  text-align: center;
+
+}
+
+
+
+h5{
+  color: $baseColor;
+  text-align: center;
+}
+
+
+//イチバンシタノボタン
+  h6{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+ .button-footer{
+          margin: auto;
+          
+          p{
+          margin-top: 15px;
+          text-align: center;
+         
+          }
+          
+          padding: 5px 0;
+          width: 180px;
+          height:50px;
+          display: block;
+          color: $baseColor;
+          font-weight: right;
+          background-color: $keyColor;
+          border-radius: 10px;
+           margin-bottom:20px;
+         
+
+ }
+
+
+
+ 
+@media (max-width:768px){
+ #skills .container {
+    @include flex-direction(column);
+  }
+  .box {
+  height: 250px;
+
+}
+}
